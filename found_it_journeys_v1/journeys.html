@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Journeys — FOUND IT!</title>
+
+<style>
+:root{
+  --bg:#f5f1e8;
+  --ink:#173126;
+  --muted:#64736b;
+  --line:rgba(23,49,38,.14);
+  --paper:#fffdf8;
+  --accent:#28553f
+}
+
+*{
+  box-sizing:border-box
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif
+}
+
+a{
+  color:inherit
+}
+
+.nav{
+  height:76px;
+  padding:0 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  background:rgba(245,241,232,.96);
+  z-index:5
+}
+
+.logo{
+  font:700 25px Georgia,serif;
+  text-decoration:none
+}
+
+.nav a{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.12em
+}
+
+.hero{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 7% 35px
+}
+
+.kicker{
+  font-size:10px;
+  letter-spacing:.2em;
+  font-weight:800;
+  color:#758179;
+  margin-bottom:14px
+}
+
+.hero h1{
+  font:normal clamp(50px,8vw,92px)/.92 Georgia,serif;
+  margin:0 0 20px;
+  max-width:900px
+}
+
+.hero p{
+  max-width:720px;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.7
+}
+
+.hero-img{
+  width:100%;
+  height:min(62vw,600px);
+  object-fit:cover;
+  border-radius:28px;
+  margin-top:25px
+}
+
+.layout{
+  max-width:1200px;
+  margin:auto;
+  padding:30px 7% 90px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 320px;
+  gap:45px
+}
+
+.story{
+  font:18px/1.85 Georgia,serif
+}
+
+.story h2{
+  font:34px Georgia,serif;
+  margin-top:42px
+}
+
+.story p{
+  margin:0 0 22px
+}
+
+.factbox{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:24px;
+  height:max-content;
+  position:sticky;
+  top:100px
+}
+
+.factbox h3{
+  font:27px Georgia,serif;
+  margin:0 0 15px
+}
+
+.factbox div{
+  padding:11px 0;
+  border-bottom:1px solid var(--line);
+  font-size:13px
+}
+
+.factbox a{
+  display:block;
+  margin-top:16px;
+  padding:12px 14px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  border-radius:999px;
+  text-align:center;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.1em
+}
+
+.back{
+  display:inline-block;
+  margin-top:10px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-decoration:underline;
+  text-underline-offset:5px
+}
+
+.cards{
+  max-width:1200px;
+  margin:auto;
+  padding:0 7% 90px
+}
+
+.cards h2{
+  font:40px Georgia,serif
+}
+
+.cardgrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px
+}
+
+.card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+  text-decoration:none
+}
+
+/* FIXED IMAGE STYLING */
+.card img{
+  display:block;
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  background:#dfe5de
+}
+
+.card div{
+  padding:18px
+}
+
+.card h3{
+  font:25px Georgia,serif;
+  margin:0 0 7px
+}
+
+.card p{
+  font-size:12px;
+  line-height:1.6;
+  color:var(--muted);
+  margin:0
+}
+
+.card:hover img{
+  transform:scale(1.03);
+  transition:transform .4s ease
+}
+
+@media(max-width:850px){
+  .layout{
+    grid-template-columns:1fr
+  }
+
+  .factbox{
+    position:static
+  }
+
+  .cardgrid{
+    grid-template-columns:1fr 1fr
+  }
+}
+
+@media(max-width:560px){
+  .cardgrid{
+    grid-template-columns:1fr
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="nav">
+
+  <a class="logo" href="../index.html">
+    ✦ FOUND IT!
+  </a>
+
+  <a href="../index.html#journeys">
+    ← HOME
+  </a>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="kicker">
+    HANDPICKED JOURNEYS
+  </div>
+
+  <h1>
+    Real stories from the road.
+  </h1>
+
+  <p>
+    Destination stories designed to become the next layer of FOUND IT!:
+    read the story, choose a real place, then go FIND IT with your
+    physical model.
+  </p>
+
+</section>
+
+
+<section class="cards">
+
+  <div class="cardgrid">
+
+
+    <!-- FIRST CARD — ALLEPPEY -->
+
+    <a class="card" href="alleppey-journey.html">
+
+      <img
+        src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1000&q=86"
+        alt="Kerala backwaters and traditional houseboat"
+        loading="lazy"
+      >
+
+      <div>
+
+        <div class="kicker">
+          KERALA · 5 MIN
+        </div>
+
+        <h3>
+          3 Days in Alleppey
+        </h3>
+
+        <p>
+          A slow escape through Alappuzha's backwaters,
+          villages and houseboat culture.
+        </p>
+
+      </div>
+
+    </a>
+
+
+    <!-- SECOND CARD -->
+
+    <a
+      class="card"
+      href="https://www.keralatourism.org/districts/alappuzha/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <img
+        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=86"
+        alt="Nature landscape"
+        loading="lazy"
+      >
+
+      <div>
+
+        <div class="kicker">
+          OFFICIAL GUIDE
+        </div>
+
+        <h3>
+          Explore Alappuzha
+        </h3>
+
+        <p>
+          Open Kerala Tourism's current district guide
+          for attractions and local context.
+        </p>
+
+      </div>
+
+    </a>
+
+
+    <!-- THIRD CARD -->
+
+    <a
+      class="card"
+      href="https://www.keralatourism.org/houseboat/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <img
+        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=86"
+        alt="Water and coast"
+        loading="lazy"
+      >
+
+      <div>
+
+        <div class="kicker">
+          OFFICIAL GUIDE
+        </div>
+
+        <h3>
+          Kerala Houseboats
+        </h3>
+
+        <p>
+          Learn about the traditional kettuvallam and
+          current Kerala houseboat experience.
+        </p>
+
+      </div>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+</body>
+</html>

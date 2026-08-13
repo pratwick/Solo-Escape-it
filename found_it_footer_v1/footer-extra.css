@@ -1,0 +1,24 @@
+/* FOUND IT! Footer V1 — optional small additions only */
+
+footer .footer-col a {
+  text-decoration: none;
+}
+
+footer .footer-col a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  footer .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,82 @@
+<section class="escape-picker reveal" id="escape-picker">
+  <div class="escape-picker-inner">
+
+    <div class="kicker">A little help choosing</div>
+    <h2>What kind of escape do you need?</h2>
+    <p class="escape-subtitle">
+      Tell us how you feel. We'll point you toward somewhere that might feel right.
+    </p>
+
+    <div class="choices" role="group" aria-label="Choose your escape mood">
+      <button class="choice active" data-choice="silence" type="button">
+        <span class="choice-icon">◌</span>
+        <span>I need silence</span>
+      </button>
+
+      <button class="choice" data-choice="mountains" type="button">
+        <span class="choice-icon">⌃</span>
+        <span>Take me higher</span>
+      </button>
+
+      <button class="choice" data-choice="water" type="button">
+        <span class="choice-icon">≈</span>
+        <span>I need the water</span>
+      </button>
+
+      <button class="choice" data-choice="spiritual" type="button">
+        <span class="choice-icon">✦</span>
+        <span>Find some peace</span>
+      </button>
+
+      <button class="choice" data-choice="adventure" type="button">
+        <span class="choice-icon">↗</span>
+        <span>Give me a story</span>
+      </button>
+    </div>
+
+    <div class="result" id="escapeResult" aria-live="polite">
+
+      <div class="result-image-wrap">
+        <img
+          id="resultImg"
+          src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=900&q=85"
+          alt="Recommended escape"
+        >
+        <div class="result-badge">FOUND IT! PICK</div>
+      </div>
+
+      <div class="result-content">
+        <span class="result-label">Your escape</span>
+
+        <b id="resultTitle">Tirthan Valley</b>
+
+        <span id="resultText">
+          Forest air · river mornings · 3–5 days
+        </span>
+
+        <div class="result-tags" id="resultTags">
+          <span>Nature</span>
+          <span>Slow travel</span>
+          <span>Himalayas</span>
+        </div>
+
+        <div class="result-actions">
+          <a id="resultLink" class="escape-btn" href="found_it_journeys_v1/tirthan-valley-journey.html">
+            EXPLORE ESCAPE →
+          </a>
+
+          <a id="resultMap" class="escape-map" href="https://www.google.com/maps/search/?api=1&query=Tirthan%20Valley%2C%20Himachal%20Pradesh" target="_blank" rel="noopener noreferrer">
+            MAP ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="escape-status">
+      <span class="status-dot"></span>
+      <span id="escapeStatus">Recommendation ready</span>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,24 @@
+/* Add after your existing website CSS */
+.story {
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.story img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.story:hover {
+  transform: translateY(-4px);
+}
+.story:hover img {
+  transform: scale(1.03);
+}
+.view-all {
+  text-decoration: none;
+  color: inherit;
+}
+.view-all:hover {
+  opacity: .55;
+}

@@ -1,0 +1,118 @@
+<footer id="about">
+
+  <div class="footer-logo">FOUND IT!</div>
+
+  <p class="footer-tag">
+    Escaping the noise, one journey at a time.
+    Quiet places, meaningful stories and visual journeys.
+  </p>
+
+  <div class="footer-grid">
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="#destinations">Destinations</a>
+      <a href="#journeys">Journeys</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#journal">Journal</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Coming soon</h4>
+      <a href="#travel-guides">Travel Guides</a>
+      <a href="#digital-journals">Digital Journals</a>
+      <a href="#prints">Prints</a>
+      <a href="#shop">Shop</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="#solo-travel">Solo Travel</a>
+      <a href="#packing">Packing</a>
+      <a href="#photography">Photography</a>
+      <a href="#travel-notes">Travel Notes</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Connect</h4>
+
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram ↗
+      </a>
+
+      <a
+        href="https://www.youtube.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        YouTube ↗
+      </a>
+
+      <a href="mailto:hello@foundit.example">
+        Email
+      </a>
+
+      <a href="#newsletter">
+        Newsletter
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© <span id="footerYear">2026</span> FOUND IT!</span>
+    <span>Made for the ones who wander.</span>
+  </div>
+
+</footer>
+
+<script>
+(function () {
+
+  /* Keep the copyright year current */
+  const year = document.getElementById("footerYear");
+
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+
+  /* Smooth scrolling for footer anchor links */
+  document.querySelectorAll('footer a[href^="#"]').forEach(function (link) {
+
+    link.addEventListener("click", function (event) {
+
+      const targetId = this.getAttribute("href");
+
+      if (!targetId || targetId === "#") {
+        return;
+      }
+
+      const target = document.querySelector(targetId);
+
+      if (target) {
+
+        event.preventDefault();
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+        /*
+          Update the URL without forcing a page reload.
+        */
+        history.replaceState(null, "", targetId);
+
+      }
+
+    });
+
+  });
+
+})();
+</script>
