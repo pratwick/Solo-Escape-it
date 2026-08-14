@@ -302,7 +302,23 @@ footer{background:var(--deep);color:#fff;padding:42px 20px calc(28px + env(safe-
     </nav>
   </div>
 </header>
+<audio id="natureSound" autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 
+<script>
+  const natureSound = document.getElementById("natureSound");
+
+  // Soft volume
+  natureSound.volume = 0.25;
+
+  // Try to start automatically
+  window.addEventListener("load", () => {
+    natureSound.play().catch(() => {
+      console.log("Autoplay blocked by browser.");
+    });
+  });
+</script>
 <main>
 <section class="hero">
   <div class="hero-bg"></div>
